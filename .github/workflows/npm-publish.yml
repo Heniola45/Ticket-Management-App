@@ -25,6 +25,8 @@ jobs:
           cache: "npm"
       - run: npm ci
       - run: npm run build
+      - name: Install gh-pages
+        run: npm install -g gh-pages
       - name: Deploy
         env:
           CI: true
