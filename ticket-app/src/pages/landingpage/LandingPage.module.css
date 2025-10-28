@@ -1,0 +1,26 @@
+:root {
+  --color-primary: #22c55e;
+  --color-primary-dark: #15803d;
+  --color-secondary: #86efac;
+  --color-bg: #f9fafb;
+  --color-text: #1e293b;
+  --color-muted: #94a3b8;
+  --svg-accent: #22c55e;
+}
+
+.wrapper {
+  background: var(--color-bg);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.section {
+  padding: 4rem 2rem;
+}

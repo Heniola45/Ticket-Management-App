@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "omotoso.hauwa@gmail.com",
+      "password": "Zahra1997@",
+      "fullname": "Hauwa Omotoso",
+      "username": "hauwa"
+    }
+  ],
+  "tickets": []
+}
