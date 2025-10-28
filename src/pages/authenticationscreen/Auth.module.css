@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #22c55e;
+  --color-primary-dark: #15803d;
+  --color-secondary: #86efac;
+  --color-bg: #f9fafb;
+  --color-text: #1e293b;
+  --color-muted: #94a3b8;
+  --svg-primary: #ffffff;
+  --svg-secondary: #86efac;
+  --svg-accent: #22c55e;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  width: 100%;
+  margin: 0 auto 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 1px;
+  text-align: left;
+  margin: 0;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  border-bottom: 1px solid var(--color-bg);
+}
+
+.tabs button {
+  padding: 0.5rem 2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--color-text);
+  font-size: 1rem;
+}
+
+.activeTab {
+  border-bottom: 2px solid var(--color-primary) !important;
+  color: var(--color-primary) !important;
+}
+
+.content {
+  width: 100%;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.formSection {
+  width: 100%;
+  height: 90vh;
+  padding: 2rem;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.loginText {
+  color: var(--color-text);
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputGroup label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.inputGroup input {
+  padding: 0.75rem;
+  border: 1px solid var(--color-muted);
+  border-radius: 8px;
+  font-size: 0.8rem;
+  color: var(--color-text);
+}
+
+.inputGroup input:focus {
+  outline: 2px solid var(--color-secondary);
+  border-color: var(--color-primary);
+}
+
+.inputRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.forgotPassword {
+  align-self: flex-end;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.loginButton {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.loginButton:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.divider {
+  text-align: center;
+  position: relative;
+  color: var(--color-muted);
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background-color: var(--color-muted);
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.socialLogin {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.socialLogin button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid var(--color-muted);
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  color: var(--color-text);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: border-color 0.2s;
+}
+
+.socialLogin button:hover {
+  border-color: var(--color-primary);
+}
+
+.socialLogin img {
+  width: 20px;
+  height: 20px;
+}
+
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 44px;
+  padding: 0;
+  border-radius: 8px;
+  border: 1px solid var(--color-muted);
+  background: white;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.iconButton:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+}
+
+.socialIcon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-text);
+}
+
+.googleButton .socialIcon {
+  color: #db4437;
+}
+
+.facebookButton .socialIcon {
+  color: #1877f2;
+
+}
+
+.imageSection {
+  width: fit-content;
+  height: 90vh;
+  background-color: var(--color-primary);
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.imageSection h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.imageSection p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.illustration {
+  width: 300px;
+  height: auto;
+  margin-top: 2rem;
+  object-fit: contain;
+}
+
+.illustration svg {
+  width: 300px;
+  height: auto;
+  margin-top: 2rem;
+}
+
+.illustration svg circle {
+  fill: var(--svg-secondary);
+}
+
+.illustration svg rect {
+  fill: var(--svg-primary);
+}
+
+.illustration svg rect:first-of-type {
+  fill: var(--svg-accent);
+}
+
+.illustration .primary-fill {
+  fill: var(--svg-primary);
+}
+
+.illustration .secondary-fill {
+  fill: var(--svg-secondary);
+}
+
+.illustration .accent-fill {
+  fill: var(--svg-accent);
+}
+
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 60;
+}
+
+.modalBox {
+  width: 90%;
+  max-width: 420px;
+  background: #fff;
+  color: var(--color-text);
+  padding: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-align: center;
+}
+
+.modalBox h3 {
+  margin: 0 0 0.5rem;
+  color: var(--color-text);
+}
+
+.modalBox p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+
+.modalBox .loginButton {
+  margin: 0;
+}
+
+.modalBox .iconButton {
+  width: auto;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 0.9rem;
+  text-align: center;
+}
